@@ -1,4 +1,4 @@
-## Overview
+# Overview
 
 <div align=center><img src="figs/crystal_cls.png"></div>
 
