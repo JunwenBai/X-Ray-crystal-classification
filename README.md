@@ -1,5 +1,7 @@
 ## Overview
+
 <div align=center><img src="figs/crystal_cls.png"></div>
+
 This repo contains a **crystal structure dataset** and presents a simple crystal structure classification task, where one is asked to predict some crystal properties given the X-ray diffraction (XRD) patterns. The XRD patterns are collected directly from the [materials project](https://materialsproject.org/) database, or interpolated between different structures.
 
 By default, we provide crystal system labels (7 in total) and space group labels (230 in total). The sample codes based on DNN and LSTM are included in the repo. If you are interested in other material properties like energy, volume, density, we also provide [pymatgen](https://pymatgen.org/index.html) APIs and you only need to input the desired property.
