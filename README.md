@@ -1,9 +1,8 @@
 ## Overview
 <div align=center><img src="figs/crystal_cls.png"></div>
+This repo contains a **crystal structure dataset** and presents a simple crystal structure classification task, where one is asked to predict some crystal properties given the X-ray diffraction (XRD) patterns. The XRD patterns are collected directly from the [materials project](https://materialsproject.org/) database, or interpolated between different structures.
 
-This repo presents a simple crystal structure classification task, where one is asked to predict some crystal properties given the X-ray diffraction (XRD) patterns. The XRD patterns are taken directly from the [materials project](https://materialsproject.org/) database, or interpolated between different structures.
-
-By default, we provide crystal system labels (7 in total) and space group labels (230 in total). The sample codes based on DNN and LSTM are included in the repo. If you are interested in other material properties like energy, volume, density, we also provide the [pymatgen](https://pymatgen.org/index.html) apis and you only need to input the desired property.
+By default, we provide crystal system labels (7 in total) and space group labels (230 in total). The sample codes based on DNN and LSTM are included in the repo. If you are interested in other material properties like energy, volume, density, we also provide [pymatgen](https://pymatgen.org/index.html) APIs and you only need to input the desired property.
 
 ## Requirements
 - Python 3
@@ -48,7 +47,6 @@ volume
 	Final relaxed volume of the material
 nelements
 	The number of elements in the material
-	
 ```
 
 The full list of available properties can be found [here](https://docs.materialsproject.org/open-apis/the-materials-api/#basic-properties).
@@ -62,7 +60,14 @@ To train a fully-connected neural network classifier, use the following script:
 ```bash
 ./run_fc.sh
 ```
-To train an LSTM classifier, use the following script:
+If you want to train on other properties, please run:
+
+```bash
+python fc_csc.py YOUR_PROPERTY
+```
+
+Similarly, to train an LSTM classifier, use the following script:
+
 ```bash
 ./run_lstm.sh
 ```
